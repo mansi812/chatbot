@@ -2,16 +2,17 @@ import collections
 
 import numpy as np
 
-from keras.preprocessing.text import Tokenizer
-from keras.preprocessing.sequence import pad_sequences
-from keras.models import Model
-from keras.layers import GRU, Input, Dense, TimeDistributed, Activation, RepeatVector, Bidirectional
-from keras.layers import Embedding, CuDNNLSTM, GlobalMaxPooling1D, GlobalAveragePooling1D, CuDNNGRU
-from keras.layers.embeddings import Embedding
-from keras.optimizers import Adam
-from keras.losses import sparse_categorical_crossentropy
-from keras.utils.vis_utils import plot_model
-from keras.callbacks import ModelCheckpoint, EarlyStopping, TensorBoard
+from tensorflow import keras
+from tensorflow.keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import GRU, Input, Dense, TimeDistributed, Activation, RepeatVector, Bidirectional
+from tensorflow.keras.layers import Embedding, CuDNNLSTM, GlobalMaxPooling1D, GlobalAveragePooling1D, CuDNNGRU
+#from keras.layers.embeddings import Embedding
+#from keras.optimizers import Adam
+#from keras.losses import sparse_categorical_crossentropy
+#from keras.utils.vis_utils import plot_model
+#from keras.callbacks import ModelCheckpoint, EarlyStopping, TensorBoard
 from nltk.translate.bleu_score import sentence_bleu, corpus_bleu
 import helper
 
